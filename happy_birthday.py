@@ -1,4 +1,5 @@
-# New Prhram
+# New Program
+
 def bday_message():
     name = input("Enter your name ")
     birth_month = input("Enter your birth month ")
@@ -7,6 +8,7 @@ def bday_message():
     print(name,", your birthday is on", birth_month, birth_day, birth_year, "!")
 
 
+bday_message()  
 bday_message()
-#bday_message()
-#bday_message()
+bday_message()
+
