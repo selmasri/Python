@@ -1,14 +1,21 @@
 # New Program
 
-def bday_message():
-    name = input("Enter your name ")
-    birth_month = input("Enter your birth month ")
-    birth_day = input("enter the birth day of the month ")
-    birth_year = input("enter your birth year ")
-    print(name,", your birthday is on", birth_month, birth_day, birth_year, "!")
+MONTHS_IN_YEAR = 12
 
+def happy_birthday():
+    name = input("Your name: ")
+    month = input("Birth month: ")
+    day = input("Birth day of the month: ")
+    year = input("Birth year: ")
 
-bday_message()  
-bday_message()
-bday_message()
+    print(name, ", your birthday is on",
+        month, day, ",", year)
+
+def main():
+    happy_birthday()
+    happy_birthday()
+    happy_birthday()
+
+main()
+
 
