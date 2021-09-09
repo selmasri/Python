@@ -12,5 +12,6 @@ def main():
     happy_birthday()
     happy_birthday()
     happy_birthday()
+    happy_birthday()
 
 main()
