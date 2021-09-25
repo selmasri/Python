@@ -1,0 +1,7 @@
+height = sqrt(base**2 - (base/2)**2)
+
+
+Mark > 90           print Excellent
+70 < Mark < 90      print Good
+50 < Mark < 70      print Pass
+Mark < 50           pint Fail
