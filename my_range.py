@@ -18,8 +18,10 @@ for i in a_range:
 
 a_string = "S 11 2 3 R"
 tokens = a_string.split(" ")
-print(tokens[1]) # 11
-print(tokens)
+#print(tokens[1]) # 11
+#print(tokens)
+
 for sam in tokens:
-    print(sam)   # S, 11, 2, 3, R
+    if sam == "L":
+        print(sam)   
 

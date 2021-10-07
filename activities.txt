@@ -5,3 +5,5 @@ Mark > 90           print Excellent
 70 < Mark < 90      print Good
 50 < Mark < 70      print Pass
 Mark < 50           pint Fail
+
+a -= 1 <=> a = a - 1
