@@ -11,7 +11,6 @@ def print_odds(my_array):
             print(my_array[index], ' ', end = '')
 
 
-
 def print_odds_rec(my_array, index = 0):
     if my_array[index] % 2 != 0:
             print(my_array[index], ' ', end='')
@@ -121,9 +120,116 @@ def count_up(number, count = 0):
     else:
         return 0
 
+def func_caller(a_func, x):
+    print(a_func.__name__)
+    result = a_func(x)
+    print(result)
+
+def square_it(y):
+    return y * y
+
+def double_it(z):
+    return z * 2
+
+def evens(n):
+    sum = 0
+    for i in range(n+1):
+        if i % 2 == 0:
+            sum += i
+    return sum
+
+def odds(n):
+    sum = 0
+    for i in range(n+1):
+        if i % 2 != 0:
+            sum += i
+    return sum
+
+def runner(a_func, n):
+    print(a_func.__name__)
+    result = a_func(n)
+    print(result)
+
+def cat(array1, array2):
+    result = [0 for a in range(len(array1)+len(array2))]
+    #result = arr.array('i', [0,0,0,0,0,0,0,0])
+    for index in range(len(array1)):
+        result[index] = array1[index]
+    
+    for index in range(len(array2)):
+        result[index + len(array1)] = array2[index]
+    return result
+    #my_array = [0 for a in range(3)]
+def tuples():
+    tupa = (1, 2, 3, 4)
+    tupb = ('a', 1, False, 3.14)
+    tupc = tuple("abcd")
+    tupb[0] = 'b'
+    print(tupb[0])
+
+def changing(a_list):
+    length = len(a_list) 
+    for index in range(length):
+        a_list[index] = ra.randint(0, length)
+    return a_list
+
+def appending(a_string):
+    a_list = []
+    for index in range(len(a_string)):
+        a_list.append(a_string[index])
+    return a_list
+
+def pop():
+    a_list = ["a", "b", "c", "d", "e"]
+    print(a_list)
+    aa = a_list.pop(0) # ["b", "c", "d", "e"]
+    print(a_list)
+    ee = a_list.pop()  # ["b", "c", "d"]
+    print(a_list)
+    print(aa)
+    print(ee)
+
+def insert():
+   b_list = [2, 3]
+   print(b_list)
+   b_list.insert(0, 1) # [1, 2, 3]
+   print(b_list)
+   b_list.insert(6, 4) # [1, 2, 4, 3]
+   print(b_list)   
+
 
 def main():
-    #an_array = arr.array('i', [100, 235, 70, 8, 5, 100, 453, 56, 89, 78, 99, 1000, 20, 676, 87,9898])
+    #pop()
+    insert()
+
+    '''
+    tuples()
+    my_list = (2,3,5,18, 'Masri')
+    my_string = 'Samir'
+    #print(changing(my_list))
+    print(appending(my_string))
+
+    #an_array1 = arr.array('i', [56, 89, 78, 99, 1000])
+    #print(type(an_array1))
+    #an_array2 = arr.array('i', [1089, 78, 9898, 78, 20, 50])
+    
+    #result_array = cat(an_array1, an_array2)
+    #print(result_array)
+    
+    
+    my_array2 = []
+    print(type(my_array2))
+    
+    my_array2.append(3)
+    my_array2.append(4)
+    print(my_array2)
+    print(my_array2[1])
+    print(type(my_arrays))
+    print(len(my_array2))
+
+    my_array = [0 for a in range(3)]
+    print(my_array)
+    print(type(my_array))
     #print_odds(an_array)
     #print_odds_rec(an_array)
     #countdown(994) # recusrion depth is 993 max
@@ -133,6 +239,14 @@ def main():
     #my_arrays()
     #my_random()
     #array_search(number)
-    my_number = int(input("enter number = "))
-    count_up(my_number)
+    #my_number = int(input("enter number = "))
+    #count_up(my_number)
+    #func_caller(square_it, 100)
+    #func_caller(double_it, 1000)
+    #print(evens(10))
+    #print(odds(10))
+    #runner(evens, 100)
+    #runner(odds, 10)
+    #print(evens(10))
+    '''
 main()
