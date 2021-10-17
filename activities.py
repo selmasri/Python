@@ -249,4 +249,5 @@ def main():
     #runner(odds, 10)
     #print(evens(10))
     '''
+array = arr.array('i',[1,4])
 main()
