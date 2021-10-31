@@ -197,10 +197,58 @@ def insert():
    b_list.insert(6, 4) # [1, 2, 4, 3]
    print(b_list)   
 
+def tuples():
+    tupa = (1, 2, 3, 4)
+    tupb = ('a', 1, False, 3.14)
+    tupc = tuple("abcd")
+    print(tupa)
+    print(tupb)
+    print(tupc)
+
+def tuple_equality(a_tuple, a_list):
+    if a_tuple == a_list:
+        print('Tuples are equal with ==')
+    
+    if a_tuple is a_list:
+        print('Tuples are equal with is')
+
+def slicing():
+    a_string = "Buttercup FTW"
+    doggo = list(a_string)
+    print(doggo)
+    slice = doggo[2:6]
+    print(slice)
+    print(type(slice))
+    print(doggo[:6])
+    print(doggo[3:])
+    print(doggo[:])
+    print(doggo[2:10:2])
+
+def b_sorting():
+    #a_list = [2, 1, 5, 4, 3]
+    a_list = ['b','a', 'A', 'c', 'C']
+    b_list = sorted(a_list)
+    #b_list = sorted(a_list, reverse=True)
+    b_list = sorted(a_list, reverse=False)
+    print(b_list)
+    print(a_list)
+    a_list.sort()
+    a_list.sort(key=str.lower)
+    print(a_list)
+
+
+
 
 def main():
+    b_sorting()
+    #slicing()
+    #a_list = [1, 'Samir', True]
+    #a_tuple = tuple(a_list)
+    #print(a_tuple)
+    #tuple_equality(a_tuple, a_list)
+    #tuples()
     #pop()
-    insert()
+    #insert()
 
     '''
     tuples()
@@ -249,5 +297,5 @@ def main():
     #runner(odds, 10)
     #print(evens(10))
     '''
-array = arr.array('i',[1,4])
+    #array = arr.array('i',[1,4])
 main()
