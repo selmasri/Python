@@ -61,6 +61,13 @@ def array_search(my_number):
             print("The serach is successful with index =", i)
             return i
 
+def function(n):
+    if n < 10:
+        function(n+1)
+        print(n)
+    return 0
+
+
 def my_random():
     
     ra.seed(1)
@@ -215,32 +222,197 @@ def tuple_equality(a_tuple, a_list):
 def slicing():
     a_string = "Buttercup FTW"
     doggo = list(a_string)
+    
+    print(type(doggo))
+    
     print(doggo)
-    slice = doggo[2:6]
-    print(slice)
-    print(type(slice))
+    
+    slice1 = doggo[2:6]
+    slice2 = doggo[8:11]
+    print('slice1 = ', slice1)
+    print('slice2 = ', slice2)
+    print(type(slice1))
+    
     print(doggo[:6])
     print(doggo[3:])
     print(doggo[:])
     print(doggo[2:10:2])
+    print(doggo[-3:])
+    print(doggo[:-4])
+    
+    print(doggo[::-2])
+    print(doggo[::-1])
+    
 
 def b_sorting():
     #a_list = [2, 1, 5, 4, 3]
     a_list = ['b','a', 'A', 'c', 'C']
     b_list = sorted(a_list)
     #b_list = sorted(a_list, reverse=True)
-    b_list = sorted(a_list, reverse=False)
+    #b_list = sorted(a_list, reverse=False)
     print(b_list)
     print(a_list)
-    a_list.sort()
+    
+    #a_list.sort()
+    #a_list.sort(reverse = True)
+    #b_list.sort(key=evens_before_odds)
     a_list.sort(key=str.lower)
     print(a_list)
+    a_list.sort(key=str.lower, reverse=True)
+    print(a_list)
+
+def concat():
+    a_list = ["a"]
+    b_list = ["b"]
+    b_list = a_list + b_list
+    print(b_list)
+    b_list = b_list + [1, 2, 3]
+    print(b_list)
+    first = ["Butt"]
+    first += ["ercup"]
+    print(first)
+    print(first.pop(0), end="")
+    #print(first)
+    print(first.pop())
+    print(first)
+
+    lst = []
+    lst.insert(0, 123)
+    lst.insert(1, 'RIT')
+    #print(lst.insert(1, 'RIT'))
+    print(lst)
+
+def packer():
+    a = 50
+    b = 'RIT'
+    c = True
+    d = 3.78
+    return a, b, c, d
+
+def swapper(a_list):
+    half = int(len(a_list)/2)
+    print(half)
+    b_list = []
+    for index in range(half):
+        b_list.insert(index, a_list.pop(0))
+    
+    return a_list + b_list
+
+def my_table(x, a_value = 0):
+    #for index in range(y):
+    my_list = [a_value for _ in range(x)]
+    print(my_list)
+    print(my_list[2][2])
+    print(my_list[2])
+    my_list[0] = [20, 7, 41, 25, 16]
+    my_list[2] = [10, 17, 2, 5, 160, 200, 56, 78, 92]
+    print(my_list)
+    print(my_list[2][4])
+    my_list[2][0] = 100
+    print(my_list)
+    print(type(my_list))
+    
+    for i in range(x):
+        print(my_list[i])
+
+def sets():
+    my_set = {1, 4}
+    print(type(my_set))
+    a_set = {1, 2, 3, 20, 18, 7, 15}
+    d_set = {1, 2, 7, 20, 300, 400}
+    b_set = {18, 7, 15, 1, 2, 3, 20}
+    c_set = {3, 2, 15}
+    for number in a_set:
+        print(number, end = " ")
+    
+    print()
+
+    #a_list = sorted(a_set)
+    a_list = list(a_set)
+    print(a_list)
+
+    #b_set.add(100)
+
+    if a_set is b_set:
+       print("OK")
+
+    #print(a_set)
+    print(b_set)
+    a_set.add(4)
+    print(a_set)
+
+    if 13 in a_set:
+       print("13 is in the set!")
+    else:
+       a_set.add(13)
+
+    a_set.add(2)
+
+    for value in a_set:
+      print(value)
+    b = 200
+    a_set.add(b)
+    print(a_set)
+    a_new_list = sorted(a_set)
+    print(a_new_list)
+    print(type(a_new_list))
+    a_new_set = set(a_new_list)
+
+    if a_set == a_new_set:
+        print("They are the same sets")
 
 
+    b_set = set("abcdcba")
+    
+    print(b_set) # {'c', 'd', 'b', 'a'}
+    
+    for char in b_set:
+        print(char, end = ' ')
 
+    a_list = [2, 5, 3]
+    a_tuple = (6, 'RIT', True)
+    c_set = set(a_tuple)
+    
+    #print(type(c_set))
+    #print(type(a_list))
+    #print(c_set)
 
 def main():
-    b_sorting()
+   sets()
+   #my_value = [2, 3, 4, 5, 6]
+   #my_value = 5
+   #my_table(4, my_value)
+   #my_list = []
+   #my_list = [10]
+   #my_list = [23, 15, 20]
+   
+   #print(my_list)
+   #print(swapper(my_list))
+   #my_list = [6,8,5,9,7,3,10,56,20,33]
+   #my_list = [x**2 for x in range(10)]
+   #my_list = [n for n in range(1, 10, 2)]
+   #my_list = [char + ' RIT' for char in "EXPO Dubai"]
+   #my_list = ['rit' for _ in range(10)]
+   #my_list = [23 for _ in range(10)]
+   #data = (1, 2, 3, 4, 5, 6, 7, 8, 9)
+   #my_list = [x//2 for x in data]
+   #my_list = [q for q in data if q % 2 != 0]
+   #my_list = [q for q in data if q >= 4 and q < 8]
+   #print(my_list)
+
+   
+    #packed = packer()
+    #print(type(packed))
+    #print(packed)
+    
+    #for index in range(len(packed)):
+    #    print(packed[index])
+    
+
+'''
+    #b_sorting()
+    #concat()
+    #b_sorting()
     #slicing()
     #a_list = [1, 'Samir', True]
     #a_tuple = tuple(a_list)
@@ -250,7 +422,7 @@ def main():
     #pop()
     #insert()
 
-    '''
+    
     tuples()
     my_list = (2,3,5,18, 'Masri')
     my_string = 'Samir'
@@ -298,4 +470,5 @@ def main():
     #print(evens(10))
     '''
     #array = arr.array('i',[1,4])
+    
 main()

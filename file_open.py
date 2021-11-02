@@ -39,7 +39,7 @@ def print_lines(file_name):
     my_file.close()
 
 def auto_file():
-    with open("song\me.txt") as a_file:
+    with open("myfile.txt") as a_file:
         for line in a_file:
             stripped = line.strip()
             print(stripped)
@@ -60,7 +60,7 @@ def main():
     #word_search = input("Enter the word to search ")
     #print_lines("song\me.txt", word_search)
     #print_lines("my_file.csv")
-    write_to_file()
-    #auto_file()
+    #write_to_file()
+    auto_file()
 
 main()
