@@ -1,0 +1,23 @@
+#system
+#management
+Book
+    title (string)
+    author (string)
+    #patron  
+#library
+
+Patron
+    ID (string)
+    name (string)
+    want_list = [book1, book2, book3, book4]
+    #borrowed_list
+Borrowing
+    book
+    patron
+    borrow_date
+    return_date
+    return_due
+#shelves
+catalog = [books]
+#card
+file (CSV file)

@@ -43,8 +43,8 @@ def my_time():
     begin = time.perf_counter()
     sum = 0
     
-    #for number in range(100000000):
-    #    sum += number
+    for number in range(100000000):
+        sum += number
     number = input("Enter number to search ")
     array_search(number)
 
@@ -376,9 +376,62 @@ def sets():
     #print(type(c_set))
     #print(type(a_list))
     #print(c_set)
+def ascii_codes(a_string):
+    #my_dict = {}
+    for ch in a_string:
+        #my_dict[ch] = ord(ch)
+        print(ch, ord(ch))
+    #print(my_dict)
+    #return my_dict
+
+def string_hash(a_string):
+    max = 0
+    chmax =''
+    for ch in a_string:
+        print(ord(ch))
+        if max < ord(ch):
+            max = ord(ch)
+            chmax = ch
+    print('Max = ', chmax, max)
+
+# This fucntion is to find the max integer value in a dictionary (all vaules are integer)
+def find_maximum(a_dictionary):
+    value_max = 0
+    key_max = ''
+    
+    for key in a_dictionary:
+        if value_max < a_dictionary[key]:
+            value_max = a_dictionary[key]
+            key_max = key
+    return key_max, value_max
 
 def main():
-   sets()
+    my_string = 'Samir El-masri'
+    #ascii_codes(my_string)
+    string_hash(my_string)
+    
+    '''
+    #a_list = [1, 2, 6]
+    #print(a_list)
+    #a_list[0] = {'a':[10, 5]}
+    #print(a_list)
+    #my_string = 'Samir El-masri'
+    #print(ascii_codes(my_string))
+    #string_hash(my_string)
+    #print(ord('l'))
+    #print(chr(116))
+    
+    my_dictionary = {'ID':230, 'Age':435, 'length':284, 'width':360, 'weight':100}
+    max_key_value = find_maximum(my_dictionary)
+    print(max_key_value)
+    
+    a_list = [2, 7, 5, 6]
+    print(a_list)
+    a_list[0] = [10, 4, 'Sam', 12.5, 5]
+    print(a_list)
+    a_list[0] = {'number':10, 'age':35}
+    print(a_list)
+   #sets()
    #my_value = [2, 3, 4, 5, 6]
    #my_value = 5
    #my_table(4, my_value)
@@ -409,7 +462,7 @@ def main():
     #    print(packed[index])
     
 
-'''
+
     #b_sorting()
     #concat()
     #b_sorting()
