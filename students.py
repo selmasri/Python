@@ -8,18 +8,25 @@ class Student:
         self.__gpa = gpa
         #self.rank = gpa*100 + credits
     
+    def get_id(self):
+        return self.id
+
+    def get_name(self):
+        return self.name
+
     def get_gpa(self):
         return self.__gpa
 
     def get_credits(self):
         return self.__credits
 
+    #This function is to change the gpa for objects
     def set_gpa(self, my_gpa):
         self.__gpa = my_gpa
     
     def set_credits(self, my_credits):
         self.__credits = my_credits
-
+    
 
     '''
     id = 'No ID'
@@ -39,16 +46,27 @@ def main():
     student1 = Student('200100A', 'Karim', 25, 3.7)
     student2 = Student('200100B', 'Mary', 15, 2.9)
     student3 = Student('8788yu', 'Mohamed', 0, 0)
+    
+    print(student1.id)
+    print(student2.name)
+
+    #print(student1.__credits)
+    #print(student3.__gpa)
+    
     #print_student(student1)
     
-    print("Student1's gpa = ", student1.get_gpa())
+    print("Student3's gpa = ", student3.get_gpa())
     print("Student2's credits = ", student2.get_credits())
+    print("Student3's ID = ", student3.get_id())
+    print("Student1's name = ", student1.get_name())
     
     student1.set_gpa(4)
-    student2.set_credits(40)
-    
     print("Student1's gpa = ", student1.get_gpa())
-    print("Student2's credits = ", student2.get_credits())
+
+    #student2.set_credits(40)
+    
+    #print("Student1's gpa = ", student1.get_gpa())
+    #print("Student2's credits = ", student2.get_credits())
    
     #student1.__gpa = 4
     #print_student(student1)
