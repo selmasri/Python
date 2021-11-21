@@ -1,22 +1,32 @@
-import turtle as t
+import turtle
 
 
 def draw_rectangle(length, width):
-   t.begin_fill()
-   t.fillcolor('blue')
-   for i in range(2):
-       t.forward(width)
-       t.left(90)
-       t.forward(length)
-       t.left(90)
-   t.end_fill()
-   t.setposition((length+width)/2, 0)
-   return length*width
-   
-def main():
-   lengthh = 200
-   width= 400
-   print('The perimeter is: ', draw_rectangle(lengthh, width))
-   input('OK')
+   turtle.fillcolor("blue")
+   turtle.begin_fill()
+   turtle.up()
+   turtle.left(90)
+   turtle.forward(100)
+   turtle.right(90)
+   turtle.forward(100)
+   turtle.left(180)
+   turtle.down()
+   turtle.forward(length)
+   turtle.left(90)
+   turtle.forward(width)
+   turtle.left(90)
+   turtle.forward(length)
+   turtle.left(90)
+   turtle.forward(width)
+   turtle.end_fill()
+   turtle.up()
+   turtle.home()
 
+
+
+def main():
+   #addition(1, 2, 3)
+   #change_array[an_array]
+   draw_rectangle(200, 100)
+   input('o')
 main()

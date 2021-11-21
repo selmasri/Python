@@ -1,2 +1,4 @@
-Samir has given this midterm
-Samir will mark the work
+my first file
+This file
+
+contains three lines

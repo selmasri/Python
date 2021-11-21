@@ -406,11 +406,15 @@ def find_maximum(a_dictionary):
     return key_max, value_max
 
 def main():
+   
+
+
+    '''
     my_string = 'Samir El-masri'
     #ascii_codes(my_string)
     string_hash(my_string)
     
-    '''
+  
     #a_list = [1, 2, 6]
     #print(a_list)
     #a_list[0] = {'a':[10, 5]}

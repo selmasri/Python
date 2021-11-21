@@ -26,16 +26,16 @@ class Student:
     
     def set_credits(self, my_credits):
         self.__credits = my_credits
-
+    
     def __lt__(self, other):
         if type(self) == type(other):
-            return self.__credits < other.__credits
+            return self.__credits < other.__credits and self.__gpa < other.__gpa
         else:
             return False
     
     def __ge__(self, other):
         if type(self) == type(other):
-            return self.__credits >= other.__credits
+            return self.__credits >= other.__credits 
         else:
             return False
 
@@ -65,12 +65,13 @@ class Bike:
         self.__color, "bicycle with",
         self.__gears, "gears and a", 
         self.__seat, "seat!")
-        
+    
     def __str__(self):
         return "A " + self.__color + " bike.\n"
     
+
     def __repr__(self):
-        return "Bike:\n  color = " + self.__color \
+        return "\n Bike:\n  color = " + self.__color \
             + "\n  gears = " + str(self.__gears) \
             + "\n  seat = " + self.__seat \
             + "\n  training wheels = " + \
@@ -87,39 +88,43 @@ class Bike:
         return not self.__eq__(other)
   
     def __hash__(self):
-       return hash(self.__color) * self.__gears
+       return hash(self.__training_wheels)
 
 
 def main():
     
-    student1 = Student('200100A', 'Karim', 35, 2.7)
-    student2 = Student('200100B', 'Mary', 35, 3.9)
+    student1 = Student('200100A', 'Karim', 45, 2.7)
+    student2 = Student('200100B', 'Mary', 45, 3.9)
     student3 = Student('8788yu', 'Mohamed', 0, 0)
-
+    
     '''
+    print(student1 >= student2)
+
     if student1 >= student2:
         print('credits1 >= credits2')
     else:
         print('credits1 < credits2')
 
     print(type(student1))
+   
     '''
-
     bike1 = Bike('red', 'leather')
     bike2 = Bike('blue', 'plastic')
     bike3 = Bike('purple', 'soft materials')
     
     print(bike1)
-
+    
     bike_set = {bike1, bike2, bike3}
     print(bike_set)
+    
 
-    bike_dictionary = {'A':bike1, 'B':bike2, 'C':bike3}
+    
+    bike_dictionary = {bike1:5, 20:bike2, bike3:56}
 
     for key in bike_dictionary:
         print(bike_dictionary[key])
-
-
+    
+    '''
     #bike1.ride('John')
     bike2.set_color('red')
     bike2.set_seat('leather')
@@ -142,6 +147,7 @@ def main():
         print('Not OK')
     
     print(bike1 != bike2)
+    '''
 
 main()
 
