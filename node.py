@@ -5,7 +5,7 @@ class Node:
      
         self.value = value
         self.next = next
-        #self.rank = gpa*100 + credits
+        
     
     def get_value(self):
         return self.value
@@ -18,8 +18,8 @@ class Node:
     def set_value(self, my_value):
         self.value = my_value
     
-    def __str__(self):
-        return "A " + self.value + " node.\n"
+    #def __str__(self):
+    #    return "A " + self.value + " node.\n"
     
 
     def __repr__(self):
@@ -60,9 +60,10 @@ def main():
     
     sequence_of_five = Node ('e', sequence_of_four)
     
-
-    #print(count(sequence_of_four))
+    #print(sequence_of_five.get_value())
+    #print(sequence_of_five.get_next())
+    #print(count(sequence_of_two))
     #print(sequence_of_five)
-    print_node(sequence_of_five)
+    print_node(sequence_of_one)
 
 main()

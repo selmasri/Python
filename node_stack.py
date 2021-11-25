@@ -16,10 +16,17 @@ class Stack:
 
     def get_is_empty(self):
         return self.is_empty
+    def push(self, value):
+        
+
+
 
 def main():
+
     stack1 = Stack(5, False)
     print(stack1)
-    stack1.push('a')
+    #stack1.push('a')
+    stack2 = Stack()
+
 
 main()
