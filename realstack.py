@@ -1,5 +1,6 @@
 #from stackclass import Stack
 
+
 class Stack:
      def __init__(self):
          self.items = []
@@ -42,10 +43,9 @@ def main():
     print('The top element of the stack is =', stack1.peek())
     print('the size of the stack is = ', stack1.size())
     print(stack1.pop())
-    
+
     print('the size of the stack is = ', stack1.size())
     print(stack1.pop())
     print('the size of the stack is = ', stack1.size())
-  
 
 main()
